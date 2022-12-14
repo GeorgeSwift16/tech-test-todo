@@ -18,7 +18,7 @@
    app
    main
    header h1 - > - reset button
-   taskbar -> search box and add task button
+   taskbar -> search box and add task button on change on click
    taskDisplaytable -> component
 
    array to track user input / todo list - prop
