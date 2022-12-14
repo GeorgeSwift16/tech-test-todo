@@ -10,19 +10,20 @@ const Main = () => {
     console.log(userTaskInput);
     settaskInput(userTaskInput);
   };
-  const [taskInput, settaskInput] = useState("");
-
-  const [tasks, settasks] = useState(["hello", "task", "task"]);
 
   const getNewTaskItem = () => {
     settasks([...tasks, taskInput]);
     settaskInput("");
   };
+  const [taskInput, settaskInput] = useState("");
+
+  const [tasks, settasks] = useState([]);
 
   return (
     <main className="to-do-container">
       <Header />
       <TaskBar
+        checkIfActive={taskInput}
         inputDisplayText={taskInput}
         taskInput={getTaskInput}
         addTask={getNewTaskItem}

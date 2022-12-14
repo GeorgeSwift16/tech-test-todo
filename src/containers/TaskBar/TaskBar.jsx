@@ -1,6 +1,6 @@
 import "./TaskBar.scss";
 
-const TaskBar = ({ taskInput, addTask, inputDisplayText }) => {
+const TaskBar = ({ taskInput, addTask, inputDisplayText, checkIfActive }) => {
   return (
     <section className="task-bar">
       <div className="task-bar__input-container">
@@ -19,7 +19,10 @@ const TaskBar = ({ taskInput, addTask, inputDisplayText }) => {
           +
         </button>
       </div>
-      <label htmlFor="add-task" className="task-bar__label">
+      <label
+        htmlFor="add-task"
+        className={checkIfActive ? "has-input" : "task-bar__label"}
+      >
         Nothing to see here yet.. Add a task in the field above!
       </label>
     </section>
