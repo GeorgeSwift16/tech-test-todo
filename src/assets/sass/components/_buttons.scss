@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as *;
+
+.button {
+  background-color: $secondary-color;
+  font-family: $header-font-family;
+  padding: 0.2rem;
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  &-reset {
+    padding: 0.5rem;
+  }
+}
