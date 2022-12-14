@@ -1,0 +1,9 @@
+@use "./assets/sass/base/reset" as *;
+@use "./assets/sass/abstracts/variables" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap");
+
+* {
+  border: 1px solid black;
+  font-family: $header-font-family;
+}
