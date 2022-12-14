@@ -1,0 +1,11 @@
+@use "../../assets/sass/abstracts/variables" as *;
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  &__heading {
+    padding: 0.5rem;
+  }
+}

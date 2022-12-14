@@ -1,0 +1,14 @@
+@use "../../assets/sass/abstracts/variables" as *;
+
+.to-do-list-display__task-container {
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.to-do-list-display__task-delete-button {
+  position: absolute;
+  right: 10%;
+}

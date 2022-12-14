@@ -1,0 +1,22 @@
+@use "../../assets/sass/abstracts/variables" as *;
+
+.task-bar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+  align-items: center;
+  &__input-container {
+    position: relative;
+    padding: 0.5rem;
+  }
+  &__input {
+    width: 100%;
+  }
+  &__button {
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: 0.1rem 0.3rem;
+    position: absolute;
+    right: 0%;
+  }
+}
