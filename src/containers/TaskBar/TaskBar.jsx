@@ -19,12 +19,11 @@ const TaskBar = ({ taskInput, addTask, inputDisplayText, checkIfActive }) => {
           +
         </button>
       </div>
-      <label
-        htmlFor="add-task"
-        className={checkIfActive ? "has-input" : "task-bar__label"}
-      >
-        Nothing to see here yet.. Add a task in the field above!
-      </label>
+      {!checkIfActive && (
+        <label htmlFor="add-task" className="task-bar__label">
+          Nothing to see here yet.. Add a task in the field above!
+        </label>
+      )}
     </section>
   );
 };

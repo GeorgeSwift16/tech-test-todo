@@ -1,11 +1,11 @@
 import "./Header.scss";
 import ResetButton from "../../components/ResetButton/ResetButton";
 
-const Header = () => {
+const Header = ({ resetfunction }) => {
   return (
     <header className="header">
       <h1 className="header__heading">My Todos</h1>
-      <ResetButton />
+      <ResetButton resetfunction={resetfunction} />
     </header>
   );
 };

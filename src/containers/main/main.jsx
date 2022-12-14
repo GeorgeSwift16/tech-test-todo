@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 const Main = () => {
   const getTaskInput = (event) => {
     let userTaskInput = event.target.value;
-    console.log(userTaskInput);
     settaskInput(userTaskInput);
   };
 
@@ -19,9 +18,14 @@ const Main = () => {
 
   const [tasks, settasks] = useState([]);
 
+  const getReset = () => {
+    settaskInput("");
+    settasks([]);
+  };
+
   return (
     <main className="to-do-container">
-      <Header />
+      <Header resetfunction={getReset} />
       <TaskBar
         checkIfActive={taskInput}
         inputDisplayText={taskInput}
