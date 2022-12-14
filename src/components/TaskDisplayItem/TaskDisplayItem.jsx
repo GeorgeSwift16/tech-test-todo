@@ -1,14 +1,13 @@
 import "./TaskDisplayItem.scss";
 
-const TaskDisplayItem = ({ key, name }) => {
-  console.log(key);
+const TaskDisplayItem = ({ tasknumber, name }) => {
   return (
     <>
       <div className="to-do-list-display__task-container">
         <button
           className="to-do-list-display__task-check-button button button-check"
           type="button"
-          value={key}
+          value={tasknumber}
         >
           #
         </button>
@@ -16,7 +15,7 @@ const TaskDisplayItem = ({ key, name }) => {
         <button
           className="to-do-list-display__task-delete-button button button-delete"
           type="button"
-          value={key}
+          value={tasknumber}
         >
           delete
         </button>
