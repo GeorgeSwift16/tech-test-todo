@@ -1,6 +1,10 @@
 @use "../../assets/sass/abstracts/variables" as *;
 
 .to-do-container {
+  border: 3px solid black;
+  border-radius: 20px;
+  margin: auto;
+  max-width: 600px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));

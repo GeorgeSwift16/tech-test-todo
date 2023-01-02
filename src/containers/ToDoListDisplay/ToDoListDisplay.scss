@@ -10,8 +10,10 @@
     margin: 0.2rem;
   }
   &__task-text {
+    overflow-wrap: break-word;
     padding-left: 0.4rem;
     font-weight: bold;
+    max-width: 70%;
   }
   &__task-delete-button {
     margin-right: 0.2rem;

@@ -1,6 +1,7 @@
 @use "../../assets/sass/abstracts/variables" as *;
 
 .to-do-list-display__task-container {
+  position: relative;
   border: 1px solid $primary-color;
   border-radius: 5px;
   display: flex;
@@ -10,5 +11,9 @@
 }
 .to-do-list-display__task-delete-button {
   position: absolute;
-  right: 10%;
+  right: 0%;
+  &:hover {
+    background-color: red;
+    transition: all 1s;
+  }
 }

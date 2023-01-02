@@ -5,9 +5,9 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
   align-items: center;
+  padding: 1rem;
   &__input-container {
     position: relative;
-    padding: 0.5rem;
   }
   &__input {
     width: 100%;
@@ -18,5 +18,10 @@
     padding: 0.1rem 0.3rem;
     position: absolute;
     right: 0%;
+    &:hover {
+      background-color: green;
+      transform-origin: center center;
+      transform: scale(1.1);
+    }
   }
 }
