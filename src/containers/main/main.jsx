@@ -13,26 +13,39 @@ const Main = () => {
   const getNewTaskItem = () => {
     settasks([...tasks, taskInput]);
     settaskInput("");
+    setTasksExist(true);
   };
   const [taskInput, settaskInput] = useState("");
 
   const [tasks, settasks] = useState([]);
 
+  const [tasksExist, setTasksExist] = useState(false);
+
   const getReset = () => {
     settaskInput("");
     settasks([]);
+    setTasksExist(false);
+  };
+
+  const handleTaskDelete = (event) => {
+    let x = tasks.splice(event.target.value, 1);
+    const newTaskList = tasks.filter((element) => element !== x);
+    settasks(newTaskList);
   };
 
   return (
     <main className="to-do-container">
       <Header resetfunction={getReset} />
       <TaskBar
-        checkIfActive={taskInput}
+        checkIfActive={tasksExist}
         inputDisplayText={taskInput}
         taskInput={getTaskInput}
         addTask={getNewTaskItem}
       />
-      <ToDoListDisplay tasklistArray={tasks} />
+      <ToDoListDisplay
+        tasklistArray={tasks}
+        deleteFunction={handleTaskDelete}
+      />
     </main>
   );
 };

@@ -1,6 +1,6 @@
 import "./TaskDisplayItem.scss";
 
-const TaskDisplayItem = ({ tasknumber, name }) => {
+const TaskDisplayItem = ({ tasknumber, name, deleteFunction }) => {
   return (
     <>
       <div className="to-do-list-display__task-container">
@@ -16,8 +16,9 @@ const TaskDisplayItem = ({ tasknumber, name }) => {
           className="to-do-list-display__task-delete-button button button-delete"
           type="button"
           value={tasknumber}
+          onClick={deleteFunction}
         >
-          delete
+          Delete
         </button>
       </div>
     </>

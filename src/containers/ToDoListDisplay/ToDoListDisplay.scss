@@ -3,7 +3,18 @@
 .to-do-list-display {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
-  padding: 0.5rem;
+  grid-template-rows: repeat(auto-fit);
+  padding: 1rem;
   background-color: $secondary-color;
+  &__task-container {
+    padding: 0.5rem;
+    margin: 0.2rem;
+  }
+  &__task-text {
+    padding-left: 0.4rem;
+    font-weight: bold;
+  }
+  &__task-delete-button {
+    margin-right: 0.2rem;
+  }
 }
