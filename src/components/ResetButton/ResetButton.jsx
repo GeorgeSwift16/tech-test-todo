@@ -4,7 +4,7 @@ const ResetButton = ({ resetfunction }) => {
   return (
     <button
       onClick={resetfunction}
-      className="header_button button button-reset"
+      className="header__button button button-reset"
     >
       Reset
     </button>

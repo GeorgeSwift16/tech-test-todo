@@ -6,4 +6,13 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  &__button {
+    background-color: rgb(245, 0, 0, 0.4);
+    &:hover {
+      background-color: rgb(245, 0, 0, 0.9);
+      transform: scale(1.2);
+      font-weight: 800;
+      transition: all 0.3s;
+    }
+  }
 }
