@@ -11,9 +11,11 @@ const Main = () => {
   };
 
   const getNewTaskItem = () => {
-    settasks([...tasks, taskInput]);
-    settaskInput("");
-    setTasksExist(true);
+    if (taskInput) {
+      settasks([...tasks, taskInput]);
+      settaskInput("");
+      setTasksExist(true);
+    }
   };
   const [taskInput, settaskInput] = useState("");
 
