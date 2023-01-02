@@ -3,7 +3,6 @@
 .to-do-list-display {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(auto-fit);
   padding: 1rem;
   background-color: $secondary-color;
   &__task-container {

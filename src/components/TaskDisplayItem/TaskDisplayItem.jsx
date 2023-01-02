@@ -4,13 +4,11 @@ const TaskDisplayItem = ({ tasknumber, name, deleteFunction }) => {
   return (
     <>
       <div className="to-do-list-display__task-container">
-        <button
+        <input
           className="to-do-list-display__task-check-button button button-check"
-          type="button"
+          type="checkbox"
           value={tasknumber}
-        >
-          #
-        </button>
+        ></input>
         <p className="to-do-list-display__task-text">{name}</p>
         <button
           className="to-do-list-display__task-delete-button button button-delete"
